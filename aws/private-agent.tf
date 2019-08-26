@@ -69,7 +69,7 @@ resource "aws_instance" "agent" {
 
 # Create DCOS Mesos Agent Scripts to execute
 module "dcos-mesos-agent" {
-  source               = "github.com/dcos/tf_dcos_core"
+  source               = "github.com/gauripowale/tf_dcos_core"
   bootstrap_private_ip = "${aws_instance.bootstrap.private_ip}"
   dcos_bootstrap_port  = "${var.custom_dcos_bootstrap_port}"
   # Only allow upgrade and install as installation mode
